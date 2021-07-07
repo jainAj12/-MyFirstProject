@@ -1,0 +1,220 @@
+1.
+By string literal : Java String literal is created by using double quotes. For Example: String s=“Welcome”;
+By new keyword : Java String is created by using a keyword “new”. For example: String s=new String(“Welcome”);
+
+2.
+class TestStringConcatenation1{  
+ public static void main(String args[]){  
+   String s="Sachin"+" Tendulkar";  
+   System.out.println(s);//Sachin Tendulkar  
+ }  
+}  
+
+3.
+public class LengthExample{  
+public static void main(String args[]){  
+String s1="java";   
+System.out.println("string length is: "+s1.length());
+
+}}  
+
+4.
+public class SubstringExample2 {  
+    public static void main(String[] args) {  
+        String s1="Javatpoint";    
+        String substr = s1.substring(0); // Starts with 0 and goes to end  
+        System.out.println(substr);  
+        String substr2 = s1.substring(5,10); // Starts from 5 and goes to 10  
+        System.out.println(substr2);    
+        String substr3 = s1.substring(5,15); // Returns Exception  
+    }  
+}  
+
+5.
+public class IndexOfExample{  
+public static void main(String args[]){  
+String s1="this is index of example";  
+//passing substring  
+int index1=s1.indexOf("is");//returns the index of is substring  
+int index2=s1.indexOf("index");//returns the index of index substring  
+System.out.println(index1+"  "+index2);//2 8  
+  
+//passing substring with from index  
+int index3=s1.indexOf("is",4);//returns the index of is substring after 4th index  
+System.out.println(index3);//5 i.e. the index of another is  
+  
+//passing char value  
+int index4=s1.indexOf('s');//returns the index of s char value  
+System.out.println(index4);//3  
+}}  
+
+6.
+import java.io.*;
+public class Test {
+
+   public static void main(String args[]) {
+      String Str = new String("Welcome to Tutorialspoint.com");
+
+      System.out.print("Return Value :" );
+      System.out.println(Str.matches("(.*)Tutorials(.*)"));
+
+      System.out.print("Return Value :" );
+      System.out.println(Str.matches("Tutorials"));
+
+      System.out.print("Return Value :" );
+      System.out.println(Str.matches("Welcome(.*)"));
+   }
+}
+
+7.
+class Teststringcomparison1{  
+ public static void main(String args[]){  
+   String s1="Sachin";  
+   String s2="Sachin";  
+   String s3=new String("Sachin");  
+   String s4="Saurav";  
+   System.out.println(s1.equals(s2));//true  
+   System.out.println(s1.equals(s3));//true  
+   System.out.println(s1.equals(s4));//false  
+ }  
+}  
+
+8.
+public class StringComparison {
+
+ public static void main(String[] args) {
+  String str = "This is a test string";
+  String str1 = new String("This");
+  System.out.println("String for comparison -- " + str.substring(0, 4));
+  // Should be true
+  System.out.println(str.substring(0, 4).equals("This"));
+  // will be false, equals is case sensitive
+  System.out.println(str.substring(0, 4).equals("this"));
+  
+  // returns true, case is ignored
+  System.out.println(str.substring(0, 4).equalsIgnoreCase("this"));
+  // returns true
+  System.out.println(str1.equalsIgnoreCase("this"));
+ }
+}
+
+public class StringComparison {
+  public static void main(String[] args) {
+    String str1 = "run";
+    String str2 = new String("run");
+    String str3 = "gun";
+    String str4 = "sun";
+    
+    //equal so returns 0
+    System.out.println(str1.compareTo(str2));
+    // Comparison with in a condition
+    // that's how generally used 
+    if(str1.compareTo(str2) == 0){
+      System.out.println("str1 is equal to str2");
+    }else{
+      System.out.println("str1 is not equal to str2");
+    }
+      
+    //str1 > str3 so returns positive integer
+    System.out.println(str1.compareTo(str3));
+    // with condition
+    if(str1.compareTo(str3) > 0){
+      System.out.println("str1 is greater than str3");
+    }else{
+      System.out.println("str1 is less than str3");
+    }
+    
+    // str1 < str4 so returns negative integer
+    System.out.println(str1.compareTo(str4));       
+  }
+}
+
+public class StringComparison {
+
+ public static void main(String[] args) {
+  String str = "This is a test string";
+  // Should be true
+  System.out.println(str.startsWith("This"));
+  // test start at index 10, so returns true
+  System.out.println(str.startsWith("test", 10));
+  
+  // returns false
+  System.out.println(str.endsWith("test"));
+  // returns true
+  System.out.println(str.endsWith("test string"));
+  // returns true
+  System.out.println(str.endsWith("string")); 
+ }
+}
+
+9.
+public class StringTrimExample{  
+public static void main(String args[]){  
+String s1="  hello string   ";  
+System.out.println(s1+"javatpoint");//without trim()  
+System.out.println(s1.trim()+"javatpoint");//with trim()  
+}}  
+
+10.
+public class ReplaceExample1{  
+public static void main(String args[]){  
+String s1="javatpoint is a very good website";  
+String replaceString=s1.replace('a','e');//replaces all occurrences of 'a' to 'e'  
+System.out.println(replaceString);  
+}}  
+
+11.
+public class SplitExample{  
+public static void main(String args[]){  
+String s1="java string split method by javatpoint";  
+String[] words=s1.split("\\s");//splits the string based on whitespace  
+//using java foreach loop to print elements of string array  
+for(String w:words){  
+System.out.println(w);  
+}  
+}}  
+
+12.
+public class IntToStringExample1{  
+public static void main(String args[]){  
+int i=200;  
+String s=String.valueOf(i);  
+System.out.println(i+100);//300 because + is binary plus operator  
+System.out.println(s+100);//200100 because + is string concatenation operator  
+}}  
+
+13.
+public class main{
+  public static void main(String[] args){
+    
+    // Converting 'int' to 'Integer'
+    int x = 123;
+    Integer y = new Integer(x); // passing to constructor
+
+    // Integer y = x;   //  or use simple assignment
+
+    System.out.println("Before conversion: " + y.getClass().getName());
+
+    System.out.println("After conversion: " + y.toString().getClass().getName());
+    System.out.println("After conversion (using Static method): " + Integer.toString(x).getClass().getName());
+  }
+}
+
+14.
+public class JavaCharacterToUpperCaseExample1 {  
+    public static void main(String[] args) {  
+      // Create four char primitives.  
+        char ch1, ch2, ch3, ch4;  
+      // Assign the values to ch1 and ch2.  
+      ch1 = 'M';  
+      ch2 = 'Q';  
+      // Assign the uppercase of ch1 and ch2 to ch3 and ch4 respectively.  
+      ch3 = Character.toLowerCase(ch1);  
+      ch4 = Character.toLowerCase(ch2);  
+      String str1 = "The lowercase of the character '" + ch1 + "' is given as: " + ch3;  
+      String str2 = "The lowercase of the character '" + ch2 + "' is given as: " + ch4;  
+      // Print the values of ch1 and ch2.  
+      System.out.println( str1 );  
+      System.out.println( str2 );  
+   }  
+}  

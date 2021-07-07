@@ -1,0 +1,455 @@
+1.
+public class SumOfArray {  
+    public static void main(String[] args) {  
+        //Initialize array  
+        int [] arr = new int [] {1, 2, 3, 4, 5};  
+        int sum = 0;  
+        //Loop through the array to calculate sum of elements  
+        for (int i = 0; i < arr.length; i++) {  
+           sum = sum + arr[i];  
+        }  
+        System.out.println("Sum of all the elements of an array: " + sum);  
+    }  
+}  
+
+2.
+public class Exercise4 {
+public static void main(String[] args) {   
+ 
+       int[] numbers = new int[]{20, 30, 25, 35, -16, 60, -100};
+       //calculate sum of all array elements
+       int sum = 0;
+       for(int i=0; i < numbers.length ; i++)
+        sum = sum + numbers[i];
+       //calculate average value
+        double average = sum / numbers.length;
+        System.out.println("Average value of the array elements is : " + average); 
+   }
+}
+
+3.
+public class Exercise6 {
+       public static int  findIndex (int[] my_array, int t) {
+        if (my_array == null) return -1;
+        int len = my_array.length;
+        int i = 0;
+        while (i < len) {
+            if (my_array[i] == t) return i;
+            else i=i+1;
+        }
+        return -1;
+    }
+    public static void main(String[] args) {
+      int[] my_array = {25, 14, 56, 15, 36, 56, 77, 18, 29, 49};
+      System.out.println("Index position of 25 is: " + findIndex(my_array, 25));
+      System.out.println("Index position of 77 is: " + findIndex(my_array, 77));
+       }
+}
+
+4.
+public class Exercise5 {
+  public static boolean contains(int[] arr, int item) {
+      for (int n : arr) {
+         if (item == n) {
+            return true;
+         }
+      }
+      return false;
+   }
+   public static void main(String[] args) {
+          int[] my_array1 = {
+            1789, 2035, 1899, 1456, 2013, 
+            1458, 2458, 1254, 1472, 2365, 
+            1456, 2265, 1457, 2456};
+      System.out.println(contains(my_array1, 2013));
+      System.out.println(contains(my_array1, 2015));
+   }
+}
+
+5.
+import java.util.Scanner;
+
+public class ElemRemoval {
+  public static void main(String[] args) {
+    Scanner in = new Scanner(System.in);
+    int[] intArr = {1, 2, 5, 12, 7, 3, 8};
+    System.out.print("Enter Element to be deleted : ");
+    int elem = in.nextInt();
+    
+    for(int i = 0; i < intArr.length; i++){
+      if(intArr[i] == elem){
+        // shifting elements
+        for(int j = i; j < intArr.length - 1; j++){
+            intArr[j] = intArr[j+1];
+        }
+        break;
+      }
+    }
+      
+    System.out.println("Elements -- " );
+    for(int i = 0; i < intArr.length; i++){
+      System.out.print(" " + intArr[i]);
+    }                
+  }
+}
+
+6.
+public class CopyArray {    
+    public static void main(String[] args) {        
+             //Initialize array     
+        int [] arr1 = new int [] {1, 2, 3, 4, 5};     
+         //Create another array arr2 with size of arr1    
+        int arr2[] = new int[arr1.length];    
+        //Copying all elements of one array into another    
+        for (int i = 0; i < arr1.length; i++) {     
+            arr2[i] = arr1[i];     
+        }      
+         //Displaying elements of array arr1     
+        System.out.println("Elements of original array: ");    
+        for (int i = 0; i < arr1.length; i++) {     
+           System.out.print(arr1[i] + " ");    
+        }     
+            
+        System.out.println();    
+            
+        //Displaying elements of array arr2     
+        System.out.println("Elements of new array: ");    
+        for (int i = 0; i < arr2.length; i++) {     
+           System.out.print(arr2[i] + " ");    
+        }     
+    }    
+}    
+
+7.
+import java.util.Scanner;
+public class Insert_Array 
+{
+    public static void main(String[] args) 
+    {
+        int n, pos, x;
+        Scanner s = new Scanner(System.in);
+        System.out.print("Enter no. of elements you want in array:");
+        n = s.nextInt();
+        int a[] = new int[n+1];
+        System.out.println("Enter all the elements:");
+        for(int i = 0; i < n; i++)
+        {
+            a[i] = s.nextInt();
+        }
+        System.out.print("Enter the position where you want to insert element:");
+        pos = s.nextInt();
+        System.out.print("Enter the element you want to insert:");
+        x = s.nextInt();
+        for(int i = (n-1); i >= (pos-1); i--)
+        {
+            a[i+1] = a[i];
+        }
+        a[pos-1] = x;
+        System.out.print("After inserting:");
+        for(int i = 0; i < n; i++)
+        {
+            System.out.print(a[i]+",");
+        }
+        System.out.print(a[n]);
+    }
+}
+
+8.
+class MinMaxExample { 
+ 
+  public static void main(String args[]){
+    int array[] = new int[]{10, 11, 88, 2, 12, 120};
+ 
+    // Calling getMax() method for getting max value
+    int max = getMax(array);
+    System.out.println("Maximum Value is: "+max);
+ 
+    // Calling getMin() method for getting min value
+    int min = getMin(array);
+    System.out.println("Minimum Value is: "+min);
+  }
+ 
+  // Method for getting the maximum value
+  public static int getMax(int[] inputArray){ 
+    int maxValue = inputArray[0]; 
+    for(int i=1;i < inputArray.length;i++){ 
+      if(inputArray[i] > maxValue){ 
+         maxValue = inputArray[i]; 
+      } 
+    } 
+    return maxValue; 
+  }
+ 
+  // Method for getting the minimum value
+  public static int getMin(int[] inputArray){ 
+    int minValue = inputArray[0]; 
+    for(int i=1;i<inputArray.length;i++){ 
+      if(inputArray[i] < minValue){ 
+        minValue = inputArray[i]; 
+      } 
+    } 
+    return minValue; 
+  } 
+}
+
+9.
+import java.util.Arrays; 
+public class Exercise11 {
+public static void main(String[] args){   
+    int[] my_array1 = {
+            1789, 2035, 1899, 1456, 2013, 
+            1458, 2458, 1254, 1472, 2365, 
+            1456, 2165, 1457, 2456};
+  System.out.println("Original array : "+Arrays.toString(my_array1));  
+   for(int i = 0; i < my_array1.length / 2; i++)
+  {
+    int temp = my_array1[i];
+    my_array1[i] = my_array1[my_array1.length - i - 1];
+    my_array1[my_array1.length - i - 1] = temp;
+  }
+    System.out.println("Reverse array : "+Arrays.toString(my_array1));
+ }
+}
+
+10.
+public class DuplicateElement {  
+    public static void main(String[] args) {      
+          
+        //Initialize array   
+        int [] arr = new int [] {1, 2, 3, 4, 2, 7, 8, 8, 3};   
+          
+        System.out.println("Duplicate elements in given array: ");  
+        //Searches for duplicate element  
+        for(int i = 0; i < arr.length; i++) {  
+            for(int j = i + 1; j < arr.length; j++) {  
+                if(arr[i] == arr[j])  
+                    System.out.println(arr[j]);  
+            }  
+        }  
+    }  
+}  
+
+11.
+import java.util.Arrays; 
+public class Exercise15 {
+public static void main(String[] args) 
+    {
+      int[] array1 = {1, 2, 5, 5, 8, 9, 7, 10};
+      int[] array2 = {1, 0, 6, 15, 6, 4, 7, 0};
+ 
+       System.out.println("Array1 : "+Arrays.toString(array1));
+       System.out.println("Array2 : "+Arrays.toString(array2));
+ 
+      
+        for (int i = 0; i < array1.length; i++)
+        {
+            for (int j = 0; j < array2.length; j++)
+            {
+                if(array1[i] == (array2[j]))
+                {
+                 
+                 System.out.println("Common element is : "+(array1[i]));
+                 }
+            }
+        }
+ 
+    }
+}
+
+12.
+public class RemoveDuplicateInArrayExample{  
+public static int removeDuplicateElements(int arr[], int n){  
+        if (n==0 || n==1){  
+            return n;  
+        }  
+        int[] temp = new int[n];  
+        int j = 0;  
+        for (int i=0; i<n-1; i++){  
+            if (arr[i] != arr[i+1]){  
+                temp[j++] = arr[i];  
+            }  
+         }  
+        temp[j++] = arr[n-1];     
+        // Changing original array  
+        for (int i=0; i<j; i++){  
+            arr[i] = temp[i];  
+        }  
+        return j;  
+    }  
+       
+    public static void main (String[] args) {  
+        int arr[] = {10,20,20,30,30,40,50,50};  
+        int length = arr.length;  
+        length = removeDuplicateElements(arr, length);  
+        //printing array elements  
+        for (int i=0; i<length; i++)  
+           System.out.print(arr[i]+" ");  
+    }  
+}  
+
+13.
+public class SecondLargestInArrayExample{  
+public static int getSecondLargest(int[] a, int total){  
+int temp;  
+for (int i = 0; i < total; i++)   
+        {  
+            for (int j = i + 1; j < total; j++)   
+            {  
+                if (a[i] > a[j])   
+                {  
+                    temp = a[i];  
+                    a[i] = a[j];  
+                    a[j] = temp;  
+                }  
+            }  
+        }  
+       return a[total-2];  
+}  
+public static void main(String args[]){  
+int a[]={1,2,5,6,3,2};  
+int b[]={44,66,99,77,33,22,55};  
+System.out.println("Second Largest: "+getSecondLargest(a,6));  
+System.out.println("Second Largest: "+getSecondLargest(b,7));  
+}}  
+
+14.
+public class SecondLargestInArrayExample{  
+public static int getSecondLargest(int[] a, int total){  
+int temp;  
+for (int i = 0; i < total; i++)   
+        {  
+            for (int j = i + 1; j < total; j++)   
+            {  
+                if (a[i] > a[j])   
+                {  
+                    temp = a[i];  
+                    a[i] = a[j];  
+                    a[j] = temp;  
+                }  
+            }  
+        }  
+       return a[total-2];  
+}  
+public static void main(String args[]){  
+int a[]={1,2,5,6,3,2};  
+int b[]={44,66,99,77,33,22,55};  
+System.out.println("Second Largest: "+getSecondLargest(a,6));  
+System.out.println("Second Largest: "+getSecondLargest(b,7));  
+}}  
+
+15.
+import java.util.Arrays; 
+ public class Exercise27 {
+ public static void main(String[] args)
+ {
+    int[] array_nums = {5, 7, 2, 4, 9};
+	System.out.println("Original Array: "+Arrays.toString(array_nums)); 
+	int ctr = 0;
+	for(int i = 0; i < array_nums.length; i++)
+	{
+		if(array_nums[i] % 2 == 0)
+			ctr++;
+	}
+	System.out.println("Number of even numbers : "+ctr);
+	System.out.println("Number of odd numbers  : "+(array_nums.length-ctr));
+ }
+}
+
+16.
+import java.util.Arrays; 
+ public class Exercise28 {
+ public static void main(String[] args)
+ {
+    int[] array_nums = {5, 7, 2, 4, 9};
+	System.out.println("Original Array: "+Arrays.toString(array_nums)); 
+	int max_val = array_nums[0];
+	int min = array_nums[0];
+	for(int i = 1; i < array_nums.length; i++)
+	{
+		if(array_nums[i] > max_val)
+			max_val = array_nums[i];
+		else if(array_nums[i] < min)
+			min = array_nums[i];
+	}
+	System.out.println("Difference between the largest and smallest values of the said array: "+(max_val-min));	
+ }
+}
+
+17.
+import java.util.*; 
+import java.io.*; 
+ public class Exercise32 {
+ public static void main(String[] args)
+ {
+    int[] array_nums = {12, 12, 23, 23, 23, 12};
+	System.out.println("Original Array: "+Arrays.toString(array_nums)); 
+	int num1 = 12;
+    int num2 = 23;
+	
+	System.out.println("Result: "+result(array_nums, num1, num2));
+    }	
+  
+  public static boolean result(int[] array_nums, int num1, int num2) {
+    for (int number : array_nums) {
+      boolean r = number != num1 && number != num2;
+      if (r) {
+        return false;
+        }
+     }
+        return true;
+   }
+}
+
+18.
+public class RemoveDuplicateInArrayExample{  
+public static int removeDuplicateElements(int arr[], int n){  
+        if (n==0 || n==1){  
+            return n;  
+        }  
+        int[] temp = new int[n];  
+        int j = 0;  
+        for (int i=0; i<n-1; i++){  
+            if (arr[i] != arr[i+1]){  
+                temp[j++] = arr[i];  
+            }  
+         }  
+        temp[j++] = arr[n-1];     
+        // Changing original array  
+        for (int i=0; i<j; i++){  
+            arr[i] = temp[i];  
+        }  
+        return j;  
+    }  
+       
+    public static void main (String[] args) {  
+        int arr[] = {10,20,20,30,30,40,50,50};  
+        int length = arr.length;  
+        length = removeDuplicateElements(arr, length);  
+        //printing array elements  
+        for (int i=0; i<length; i++)  
+           System.out.print(arr[i]+" ");  
+    }  
+}  
+
+19.
+import java.util.Scanner;
+public class MissingNumber {
+   public static void main(String[] args) {
+      Scanner sc = new Scanner(System.in);
+      System.out.println("Enter the n value: ");
+      int n = sc.nextInt();
+      int inpuArray[] = new int[n];
+      System.out.println("Enter (n-1) numbers: ");
+      for(int i=0; i<=n-2; i++) {
+         inpuArray[i] = sc.nextInt();
+      }
+      //Finding the missing number
+      int sumOfAll = (n*(n+1))/2;
+      int sumOfArray = 0;
+      for(int i=0; i<=n-2; i++) {
+         sumOfArray = sumOfArray+inpuArray[i];
+      }
+      int missingNumber = sumOfAll-sumOfArray;
+      System.out.println("Missing number is: "+missingNumber);
+   }
+}

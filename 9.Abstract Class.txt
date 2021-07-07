@@ -1,0 +1,83 @@
+1.
+abstract class Bike{  
+  abstract void run();  
+}  
+class Honda4 extends Bike{  
+void run(){System.out.println("running safely");}  
+public static void main(String args[]){  
+ Bike obj = new Honda4();  
+ obj.run();  
+}  
+} 
+
+2.
+abstract class Bike{  
+   Bike(){System.out.println("bike is created");}  
+   abstract void run();  
+   void changeGear(){System.out.println("gear changed");}  
+ }  
+//Creating a Child class which inherits Abstract class  
+ class Honda extends Bike{  
+ void run(){System.out.println("running safely..");}  
+ }  
+//Creating a Test class which calls abstract and non-abstract methods  
+ class TestAbstraction2{  
+ public static void main(String args[]){  
+  Bike obj = new Honda();  
+  obj.run();  
+  obj.changeGear();  
+ }  
+}  
+
+3.
+abstract class Bike{  
+   Bike(){System.out.println("bike is created");}  
+   abstract void run();  
+   void changeGear(){System.out.println("gear changed");}  
+ }  
+//Creating a Child class which inherits Abstract class  
+ class Honda extends Bike{  
+ void run(){System.out.println("running safely..");}  
+ }  
+//Creating a Test class which calls abstract and non-abstract methods  
+ class TestAbstraction2{  
+ public static void main(String args[]){  
+  Bike obj = new Honda();  
+  obj.run();  
+  obj.changeGear();  
+ }  
+}  
+
+4.
+public abstract class Test {
+
+    void t1()
+    {
+        System.out.println("super");
+
+    }
+
+}
+ public class concret extends Test{
+
+    void t1()
+    {
+        System.out.println("child");
+
+    }
+    void t2()
+    {
+        System.out.println("child2");
+
+    }
+
+}
+
+public class run {
+    public static void main(String[] args) {
+        Test t=new concret();
+
+        t.t1();
+    }
+
+}

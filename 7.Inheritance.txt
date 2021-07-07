@@ -1,0 +1,115 @@
+1.
+public class Animal{
+   public void sound(){
+      System.out.println("Animal is making a sound");   
+   }
+}
+
+class Horse extends Animal{
+    @Override
+    public void sound(){
+        System.out.println("Neigh");
+    }
+    public static void main(String args[]){
+    	Animal obj = new Horse();
+    	obj.sound();
+    }
+}
+
+public class Cat extends Animal{
+    @Override
+    public void sound(){
+        System.out.println("Meow");
+    }
+    public static void main(String args[]){
+    	Animal obj = new Cat();
+    	obj.sound();
+    }
+}
+
+2.
+public class Animal{
+   public void sound(){
+      System.out.println("Animal is making a sound");   
+   }
+}
+
+class Horse extends Animal{
+    @Override
+    public void sound(){
+        System.out.println("Neigh");
+    }
+    public static void main(String args[]){
+    	Animal obj = new Horse();
+    	obj.sound();
+    }
+}
+
+public class Cat extends Animal{
+    @Override
+    public void sound(){
+        System.out.println("Meow");
+    }
+    public static void main(String args[]){
+    	Animal obj = new Cat();
+    	obj.sound();
+    }
+}
+
+3.
+public class Animal{
+   public void sound(){
+      System.out.println("Animal is making a sound");   
+   }
+}
+
+class Horse extends Animal{
+    @Override
+    public void sound(){
+        System.out.println("Neigh");
+    }
+    public static void main(String args[]){
+    	Animal obj = new Horse();
+    	obj.sound();
+    }
+}
+
+public class Cat extends Animal{
+    @Override
+    public void sound(){
+        System.out.println("Meow");
+    }
+    public static void main(String args[]){
+    	Animal obj = new Cat();
+    	obj.sound();
+    }
+}
+
+4.
+public class Animal{
+   public void sound(){
+      System.out.println("Animal is making a sound");   
+   }
+}
+
+class Horse extends Animal{
+    @Override
+    public void sound(){
+        System.out.println("Neigh");
+    }
+    public static void main(String args[]){
+    	Animal obj = new Horse();
+    	obj.sound();
+    }
+}
+
+public class Cat extends Animal{
+    @Override
+    public void sound(){
+        System.out.println("Meow");
+    }
+    public static void main(String args[]){
+    	Animal obj = new Cat();
+    	obj.sound();
+    }
+}

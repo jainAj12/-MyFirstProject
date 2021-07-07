@@ -1,0 +1,290 @@
+1.
+public class ArithmeticExceptionTest {
+   public static void main(String[] args) {
+      int a = 0, b = 10;
+      int c = b/a;
+      System.out.println("Value of c is : "+ c);
+   }
+}
+
+2.
+class Example1
+{
+   public static void main(String args[])
+   {
+      try{
+         int num1=30, num2=0;
+         int output=num1/num2;
+         System.out.println ("Result: "+output);
+      }
+      catch(ArithmeticException e){
+         System.out.println ("You Shouldn't divide a number by zero");
+      }
+   }
+}
+
+3.
+
+// Java program that demonstrates the use of throw
+class ThrowExcep
+{
+	static void fun()
+	{
+		try
+		{
+			throw new NullPointerException("demo");
+		}
+		catch(NullPointerException e)
+		{
+			System.out.println("Caught inside fun().");
+			throw e; // rethrowing the exception
+		}
+	}
+
+	public static void main(String args[])
+	{
+		try
+		{
+			fun();
+		}
+		catch(NullPointerException e)
+		{
+			System.out.println("Caught in main.");
+		}
+	}
+}
+
+4.
+public class MultipleCatchBlock1 {  
+  
+    public static void main(String[] args) {  
+          
+           try{    
+                int a[]=new int[5];    
+                a[5]=30/0;    
+               }    
+               catch(ArithmeticException e)  
+                  {  
+                   System.out.println("Arithmetic Exception occurs");  
+                  }    
+               catch(ArrayIndexOutOfBoundsException e)  
+                  {  
+                   System.out.println("ArrayIndexOutOfBounds Exception occurs");  
+                  }    
+               catch(Exception e)  
+                  {  
+                   System.out.println("Parent Exception occurs");  
+                  }             
+               System.out.println("rest of the code");    
+    }  
+}  
+
+5.
+class TestCustomException1{  
+  
+   static void validate(int age)throws InvalidAgeException{  
+     if(age<18)  
+      throw new InvalidAgeException("not valid");  
+     else  
+      System.out.println("welcome to vote");  
+   }  
+     
+   public static void main(String args[]){  
+      try{  
+      validate(13);  
+      }catch(Exception m){System.out.println("Exception occured: "+m);}  
+  
+      System.out.println("rest of the code...");  
+  }  
+}  
+
+6.
+public class StudentNotFoundException extends Exception {
+ 
+    public StudentNotFoundException(String message) {
+        super(message);
+    }
+}
+
+7.
+class TestFinallyBlock{  
+  public static void main(String args[]){  
+  try{  
+   int data=25/5;  
+   System.out.println(data);  
+  }  
+  catch(NullPointerException e){System.out.println(e);}  
+  finally{System.out.println("finally block is always executed");}  
+  System.out.println("rest of the code...");  
+  }  
+}  
+
+8.
+class Example1
+{
+   public static void main(String args[])
+   {
+      try{
+         int num1=30, num2=0;
+         int output=num1/num2;
+         System.out.println ("Result: "+output);
+      }
+      catch(ArithmeticException e){
+         System.out.println ("You Shouldn't divide a number by zero");
+      }
+   }
+}
+
+9.
+public class ArrayIndexOutOfBoundException {  
+  
+    public static void main(String[] args) {  
+String[] arr = {"Rohit","Shikar","Virat","Dhoni"};   
+//Declaring 4 elements in the String array                                       
+          
+        for(int i=0;i<=arr.length;i++) {       
+  
+//Here, no element is present at the iteration number arr.length, i.e 4  
+             System.out.println(arr[i]);      
+//So it will throw ArrayIndexOutOfBoundException at iteration 4           
+        }  
+  
+    }  
+  
+}  
+
+10.
+public class DataTest {
+
+  public static void main(String[] args) {
+    try {
+      Class.forName("com.journaldev.MyInvisibleClass");
+
+      ClassLoader.getSystemClassLoader().loadClass("com.journaldev.MyInvisibleClass");
+
+      ClassLoader.getPlatformClassLoader().loadClass("com.journaldev.MyInvisibleClass");
+    } catch (ClassNotFoundException e) {
+      e.printStackTrace();
+    }
+  }
+
+}
+
+11.
+public class FileNotFoundExceptionTest {
+
+    private static final Logger LOG
+      = Logger.getLogger(FileNotFoundExceptionTest.class);
+    private String fileName = Double.toString(Math.random());
+    
+    protected void readFailingFile() throws IOException {
+        BufferedReader rd = new BufferedReader(new FileReader(new File(fileName)));
+        rd.readLine();
+        // no need to close file
+    }
+
+    class BusinessException extends RuntimeException {
+        public BusinessException(String string, FileNotFoundException ex) {
+            super(string, ex);
+        }
+    }
+}
+
+12.
+import java.util.*;  
+public class ScannerIOExceptionExample1 {    
+    public static void main(String[] args) {  
+        //Create a new scanner with the specified String Object  
+          Scanner scan = new Scanner("Hello World! Hello JavaTpoint.");  
+          //Print the line  
+          System.out.println("" + scan.nextLine());  
+          //Check if there is an IO exception  
+          System.out.println("Exception Output: " + scan.ioException());  
+          scan.close();   
+    }  
+}  
+
+13.
+private void verifyArrayFieldTypeAnnotations(Class c)
+    throws NoSuchFieldException, NoSuchMethodException {
+
+    Annotation anno;
+    AnnotatedType at;
+
+    at = c.getDeclaredField("typeAnnotatedArray").getAnnotatedType();
+    anno = at.getAnnotations()[0];
+    verifyTestAnn(arrayTA[0], anno, "array1");
+    arrayTA[0] = anno;
+
+    for (int i = 1; i <= 3; i++) {
+        at = ((AnnotatedArrayType) at).getAnnotatedGenericComponentType();
+        anno = at.getAnnotations()[0];
+        verifyTestAnn(arrayTA[i], anno, "array" + (i + 1));
+        arrayTA[i] = anno;
+    }
+}
+
+14.
+private void verifyArrayFieldTypeAnnotations(Class c)
+    throws NoSuchFieldException, NoSuchMethodException {
+
+    Annotation anno;
+    AnnotatedType at;
+
+    at = c.getDeclaredField("typeAnnotatedArray").getAnnotatedType();
+    anno = at.getAnnotations()[0];
+    verifyTestAnn(arrayTA[0], anno, "array1");
+    arrayTA[0] = anno;
+
+    for (int i = 1; i <= 3; i++) {
+        at = ((AnnotatedArrayType) at).getAnnotatedGenericComponentType();
+        anno = at.getAnnotations()[0];
+        verifyTestAnn(arrayTA[i], anno, "array" + (i + 1));
+        arrayTA[i] = anno;
+    }
+}
+
+15.
+public class Tester {
+   public static void main(String[] args) {
+      Object ref = null;
+      ref.toString(); // this will throw a NullPointerException
+   }
+}
+
+16.
+public class Example {  
+  
+    public static void main(String[] args) {  
+         int a = Integer.parseInt(null); 
+    }  
+  
+}  
+
+17.
+public class StringIndexOutOfBoundsException {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter the input text : ");
+        try{
+            char c = scanner.nextLine().charAt(4);
+            System.out.println("The character at index 4 is : "+c);
+        }catch(Exception e){
+            //StringIndexOutOfBoundsException cannot be caught explicitly
+            System.out.println("Caught exception : "+e.toString());
+        }
+    }
+}
+
+18.
+public static void commit() {
+	Connection conn = tl.get();
+	if (conn != null) {
+		try {
+			conn.commit();
+		} catch (SQLException e) {
+			e.printStackTrace();
+			throw new RuntimeException("Connection");
+		}
+	}
+}

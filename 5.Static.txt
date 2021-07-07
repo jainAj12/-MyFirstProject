@@ -1,0 +1,101 @@
+1.
+class JavaExample2{
+   static int num;
+   static String mystr;
+   //First Static block
+   static{
+      System.out.println("Static Block 1");
+      num = 68;
+      mystr = "Block1";
+  } 
+  //Second static block
+  static{
+      System.out.println("Static Block 2");
+      num = 98;
+      mystr = "Block2";
+  }
+  public static void main(String args[])
+  {
+      System.out.println("Value of num: "+num);
+      System.out.println("Value of mystr: "+mystr);
+   }
+}
+
+2.
+public class Test {
+   public int instanceVariable = 10;
+      public static void main(String args[]) {
+      Test test = new Test();
+      System.out.println(test.instanceVariable);
+   }
+}
+
+3.
+public class Test {
+   public int instanceVariable = 10;
+      public static void main(String args[]) {
+      Test test = new Test();
+      System.out.println(test.instanceVariable);
+   }
+}
+
+4.
+class Foo {
+    static void staticMethod() {
+        Foo foo = new Foo();
+        foo.instanceMethod();
+    }
+
+    void instanceMethod() { }
+}
+
+5.
+class Foo {
+    static void staticMethod() {
+        Foo foo = new Foo();
+        foo.instanceMethod();
+    }
+
+    void instanceMethod() { }
+}
+
+6.
+public class Counter {
+
+    int myCount = 0;
+
+    void increment ( ) {
+        myCount = myCount + 1;
+    }
+
+    void print ( ) {
+        System.out.println ("count = " + myCount);
+    }
+
+    public static void main (String [ ] args) {
+        Counter c1 = new Counter ( );
+        c1.increment ( );  // c1's myCount is now 1
+        c1.increment ( );  // c1's myCount is now 2
+        Counter c2 = new Counter ( );
+        c2.increment ( );  // c2's myCount is now 1
+        c1.increment ( );  // c1's myCount is now 3
+        c1.myCount = 0;    // effectively resets the c1 counter
+    }
+}
+
+7.
+public class StaticBlock 
+{
+   static String sentence;
+   static int number;
+   static
+    {
+         sentence = "Welcome to DataFlair";
+         number = 69;
+    }
+    public static void main(String args[])
+    {
+         System.out.println(sentence);
+         System.out.println("Value of Integer: "+number);
+    }
+}

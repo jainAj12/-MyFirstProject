@@ -1,0 +1,273 @@
+1.
+interface printable{  
+void print();  
+}  
+class A6 implements printable{  
+public void print(){System.out.println("Hello");}  
+  
+public static void main(String args[]){  
+A6 obj = new A6();  
+obj.print();  
+ }  
+}  
+
+2.
+interface MyInterface
+{
+   /* compiler will treat them as: 
+    * public abstract void method1();
+    * public abstract void method2();
+    */
+   public void method1();
+   public void method2();
+}
+class Demo implements MyInterface
+{
+   /* This class must have to implement both the abstract methods
+    * else you will get compilation error
+    */
+   public void method1()
+   {
+	System.out.println("implementation of method1");
+   }
+   public void method2()
+   {
+	System.out.println("implementation of method2");
+   }
+   public static void main(String arg[])
+   {
+	MyInterface obj = new Demo();
+	obj.method1();
+   }
+}
+
+3.
+public interface InterfaceDemo{
+    default public void displayNameDefault(String name){
+       System.out.println("Your name is : " + name);
+   }
+    public void displayName(String name);
+    public void displayNameAndDesignation(String name, String designation);
+}
+
+public class InterfaceDemoImpl implements InterfaceDemo{
+    public void displayName(String name) {
+         System.out.println(name);
+    }  
+      public void displayNameAndDesignation(String name, String designation) {
+           System.out.println("Name:" + name + "\n"+ "Designation:" + designation);
+     }
+}
+
+public class CallInterfaceMethod {
+     public static void main(String args[]){
+         InterfaceDemo demo = new InterfaceDemoImpl();
+         demo.displayName("Ansh");
+         demo.displayNameAndDesignation("Ansh", "Java Developer");
+         demo.displayNameDefault("Ansh");
+      }
+}
+
+4.
+interface A{
+  int f();
+}
+
+interface B{
+  int f();
+}
+
+class Test implements A, B{   
+  public static void main(String... args) throws Exception{   
+
+  }
+
+  @Override
+  public int f() {  // from which interface A or B
+    return 0;
+  }
+}   
+
+5.
+public interface InterfaceX
+{
+	public int ansh();
+}
+public interface InterfaceY
+{
+	public String ansh();
+}
+
+public class Testing implements InterfaceX, InterfaceY
+{
+public String ansh()
+	{
+		return "hello";
+	}
+}
+
+6.
+// A simple program to Test Interface default
+// methods in java
+interface TestInterface
+{
+	// abstract method
+	public void square(int a);
+
+	// default method
+	default void show()
+	{
+	System.out.println("Default Method Executed");
+	}
+}
+
+class TestClass implements TestInterface
+{
+	// implementation of square abstract method
+	public void square(int a)
+	{
+		System.out.println(a*a);
+	}
+
+	public static void main(String args[])
+	{
+		TestClass d = new TestClass();
+		d.square(4);
+
+		// default method executed
+		d.show();
+	}
+}
+
+7.
+// Java program to demonstrate that a class can
+// implement multiple interfaces
+import java.io.*;
+interface intfA
+{
+	void m1();
+}
+
+interface intfB
+{
+	void m2();
+}
+
+// class implements both interfaces
+// and provides implementation to the method.
+class sample implements intfA, intfB
+{
+	@Override
+	public void m1()
+	{
+		System.out.println("Welcome: inside the method m1");
+	}
+
+	@Override
+	public void m2()
+	{
+		System.out.println("Welcome: inside the method m2");
+	}
+}
+
+class GFG
+{
+	public static void main (String[] args)
+	{
+		sample ob1 = new sample();
+
+		// calling the method implemented
+		// within the class.
+		ob1.m1();
+		ob1.m2();
+	}
+}
+
+8.
+import java.io.*;
+
+// A simple interface
+interface In1
+{
+	// public, static and final
+	final int a = 10;
+
+	// public and abstract
+	void display();
+}
+
+// A class that implements the interface.
+class TestClass implements In1
+{
+	// Implementing the capabilities of
+	// interface.
+	public void display()
+	{
+		System.out.println("Geek");
+	}
+
+	// Driver Code
+	public static void main (String[] args)
+	{
+		TestClass t = new TestClass();
+		t.display();
+		System.out.println(a);
+	}
+}
+
+9.
+class EncapsulationDemo{
+    private int ssn;
+    private String empName;
+    private int empAge;
+
+    //Getter and Setter methods
+    public int getEmpSSN(){
+        return ssn;
+    }
+
+    public String getEmpName(){
+        return empName;
+    }
+
+    public int getEmpAge(){
+        return empAge;
+    }
+
+    public void setEmpAge(int newValue){
+        empAge = newValue;
+    }
+
+    public void setEmpName(String newValue){
+        empName = newValue;
+    }
+
+    public void setEmpSSN(int newValue){
+        ssn = newValue;
+    }
+}
+public class EncapsTest{
+    public static void main(String args[]){
+         EncapsulationDemo obj = new EncapsulationDemo();
+         obj.setEmpName("Ansh");
+         obj.setEmpAge(32);
+         obj.setEmpSSN(112233);
+         System.out.println("Employee Name: " + obj.getEmpName());
+         System.out.println("Employee SSN: " + obj.getEmpSSN());
+         System.out.println("Employee Age: " + obj.getEmpAge());
+    } 
+}
+
+10.
+public interface MyInterface{
+   private static final int num = 10;
+   private abstract void demo();
+}
+
+11.
+interface interfaceName{
+   // Any number of final, static variables
+   datatype variableName = value;
+   // Any number of abstract method declarations
+   returntype methodName(list of parameters or no parameters);
+}

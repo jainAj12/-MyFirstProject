@@ -1,0 +1,77 @@
+1.
+package privatePkg;
+class privateImp {
+    private void print() {
+        System.out.println("Inside the PrivateImp class method "+this);
+    }
+
+    public void access() {
+        print();
+    }
+}
+
+class SubClass extends privateImp {
+    public static void main(String ... args) {
+        System.out.println("In the subclass");
+        SubClass sb = new SubClass();
+        sb.access();
+    }
+}
+
+2.
+class BaseClass 
+{ 
+    void display()      //no access modifier indicates default modifier
+       { 
+           System.out.println("BaseClass::Display with 'dafault' scope"); 
+       } 
+} 
+ 
+class Main
+{ 
+    public static void main(String args[]) 
+       {   
+          //access class with default scope
+          BaseClass obj = new BaseClass(); 
+   
+          obj.display();    //access class method with default scope
+       } 
+}
+
+3.
+class A 
+{ 
+   protected void display() 
+    { 
+        System.out.println("SoftwareTestingHelp"); 
+    } 
+} 
+ 
+class B extends A {}  
+class C extends B {}
+ 
+class Main{
+     public static void main(String args[]) 
+   {   
+       B obj = new B();     //create object of class B   
+       obj.display();       //access class A protected method using obj
+       C cObj = new C();    //create object of class C
+       cObj.display ();     //access class A protected method using cObj
+   }   
+}
+
+4.
+class TestClass{  
+    //private variable and method
+    private int num=100;  
+    private void printMessage(){System.out.println("Hello java");}  
+     
+}  
+   
+public class Main{  
+ public static void main(String args[]){  
+   TestClass obj=new TestClass();  
+   System.out.println(obj.num);//try to access private data member - Compile Time Error  
+   obj.printMessage();//Accessing private method - Compile Time Error  
+   }  
+}  

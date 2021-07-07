@@ -1,0 +1,80 @@
+1.
+class Adder{  
+static int add(int a,int b){return a+b;}  
+static int add(int a,int b,int c){return a+b+c;}  
+}  
+class TestOverloading1{  
+public static void main(String[] args){  
+System.out.println(Adder.add(11,11));  
+System.out.println(Adder.add(11,11,11));  
+}}  
+
+2.
+class Adder{  
+static int add(int a,int b){return a+b;}  
+static int add(int a,int b,int c){return a+b+c;}  
+}  
+class TestOverloading1{  
+public static void main(String[] args){  
+System.out.println(Adder.add(11,11));  
+System.out.println(Adder.add(11,11,11));  
+}}  
+
+3.
+class DisplayOverloading
+{
+    public void disp(char c)
+    {
+         System.out.println(c);
+    }
+    public void disp(char c, int num)  
+    {
+         System.out.println(c + " "+num);
+    }
+}
+class Sample
+{
+   public static void main(String args[])
+   {
+       DisplayOverloading obj = new DisplayOverloading();
+       obj.disp('a');
+       obj.disp('a',10);
+   }
+}
+
+4.
+class Adder{  
+static int add(int a, int b){return a+b;}  
+static double add(double a, double b){return a+b;}  
+}  
+class TestOverloading2{  
+public static void main(String[] args){  
+System.out.println(Adder.add(11,11));  
+System.out.println(Adder.add(12.3,12.6));  
+}}  
+
+5.
+public class Main {
+    public static void main(String... args) {
+        Main.<Integer>print();
+        Main.<Short>print();
+        Main.<Byte>print();
+        Main.<Void>print();
+    }
+
+    public static <T extends Integer> int print() {
+        System.out.println("here - Integer");
+        return 0;
+    }
+    public static <T extends Short> short print() {
+        System.out.println("here - Short");
+        return 0;
+    }
+    public static <T extends Byte> byte print() {
+        System.out.println("here - Byte");
+        return 0;
+    }
+    public static <T extends Void> void print() {
+        System.out.println("here - Void");
+    }
+}

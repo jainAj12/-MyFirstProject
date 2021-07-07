@@ -1,0 +1,228 @@
+1.
+import java.util.Scanner;
+
+public class ArithmeticOperation {
+
+   public static void main(String[] args) {
+        
+        // Create scanner class object
+        Scanner in = new Scanner(System.in);
+
+        // Input two numbers from user
+        System.out.println("Enter first number :");
+        int num1 = in.nextInt();
+        System.out.println("Enter second number :");
+        int num2 = in.nextInt();
+        
+
+        // Perform arithmetic operations.
+        int sum 		= num1 + num2;
+        int difference 	= num1 - num2;
+        int product 	= num1 * num2;
+        int quotient	= num1 / num2;
+        
+
+        // Print result to console.
+        System.out.println("Sum : "         + sum);
+        System.out.println("Difference : "  + difference);
+        System.out.println("Product : "     + product);
+        System.out.println("Quotient : "    + quotient);
+        
+    }
+}
+
+2.
+import java.io.*;
+  class Unary {
+    public static void main(String[] args)
+    {
+        // initializing variables
+        int num = 5;
+  
+        // first 5 gets printed and then
+        // increment to 6
+        System.out.println("Post "
+                           + "increment = " + num++);
+  
+        // num was 6, incremented to 7
+        // then printed
+        System.out.println("Pre "
+                           + "increment = " + ++num);
+    }
+}
+
+import java.io.*;
+  
+class Unary {
+    public static void main(String[] args)
+    {
+        // initializing variables
+        int num = 5;
+  
+        // first 5 gets printed and then
+        // decremented to 4
+        System.out.println("Post "
+                           + "decrement = " + num--);
+  
+        System.out.println("num = " + num);
+  
+        // num was 4, decremented to 3
+        // then printed
+        System.out.println("Pre "
+                           + "decrement = " + --num);
+    }
+}
+
+3.
+import java.util.Scanner;
+
+class EqualToAndNotEqualToOperator{
+	public static void main(String[] args){
+		Scanner in=new Scanner(System.in);
+		System.out.println("Enter any two numbers to check for equality: ");
+		int num1=in.nextInt();
+		int num2=in.nextInt();
+		if(num1==num2){
+		System.out.println("The two numbers are equal");
+		}
+		else if(num1!=num2){
+		System.out.println("The numbers are not equal");
+		}
+	}
+}
+
+4.
+import java.io.*;
+class checkEqual {
+    public static void main(String[] args)
+    {
+        int firstNumber = 15;
+        int secondNumber = 15;
+        if ((firstNumber - secondNumber) == 0)
+            System.out.println("Numbers are equal");
+        else
+            System.out.println("Numbers are not equal");
+    }
+}
+
+5.
+import java.io.*;
+  
+class Logical {
+    public static void main(String[] args)
+    {
+        // initializing variables
+        int a = 10, b = 20, c = 20, d = 0;
+  
+        // Displaying a, b, c
+        System.out.println("Var1 = " + a);
+        System.out.println("Var2 = " + b);
+        System.out.println("Var3 = " + c);
+  
+        // using logical AND to verify
+        // two constraints
+        if ((a < b) && (b == c)) {
+            d = a + b + c;
+            System.out.println("The sum is: " + d);
+        }
+        else
+            System.out.println("False conditions");
+    }
+}
+
+import java.io.*;
+  
+class Logical {
+    public static void main(String[] args)
+    {
+        // initializing variables
+        int a = 10, b = 1, c = 10, d = 30;
+  
+        // Displaying a, b, c
+        System.out.println("Var1 = " + a);
+        System.out.println("Var2 = " + b);
+        System.out.println("Var3 = " + c);
+        System.out.println("Var4 = " + d);
+  
+        // using logical OR to verify
+        // two constraints
+        if (a > b || c == d)
+            System.out.println("One or both"
+                               + " the conditions are true");
+        else
+            System.out.println("Both the"
+                               + " conditions are false");
+    }
+}
+
+import java.io.*;
+  
+class Logical {
+    public static void main(String[] args)
+    {
+        // initializing variables
+        int a = 10, b = 1;
+  
+        // Displaying a, b, c
+        System.out.println("Var1 = " + a);
+        System.out.println("Var2 = " + b);
+  
+        // Using logical NOT operator
+        System.out.println("!(a < b) = " + !(a < b));
+        System.out.println("!(a > b) = " + !(a > b));
+    }
+}
+
+6.
+public class Test {
+
+   public static void main(String args[]) {
+      int a = 10;
+      int b = 20;
+
+      System.out.println("a == b = " + (a == b) );
+      System.out.println("a != b = " + (a != b) );
+      System.out.println("a > b = " + (a > b) );
+      System.out.println("a < b = " + (a < b) );
+      System.out.println("b >= a = " + (b >= a) );
+      System.out.println("b <= a = " + (b <= a) );
+   }
+}
+
+7.
+import java.util.Scanner;
+public class LargestOfN {
+
+  public static void main(String[] args) {
+
+    System.out.println("Welcome to Java Program to find "
+        + "largest and smallest number without using array");
+    
+    System.out.println("Please enter value of N: ");
+
+    Scanner sc = new Scanner(System.in);
+    int n = sc.nextInt();
+    int largest = Integer.MIN_VALUE;
+    int smallest = Integer.MAX_VALUE;
+
+    System.out.printf("Please enter %d numbers %n", n);
+    for (int i = 0; i < n; i++) {
+
+      int current = sc.nextInt();
+      if (current > largest) {
+        largest = current;
+      } 
+      if (current < smallest) {
+        smallest = current;
+
+      }
+    }
+
+    System.out.println("largest of N number is : " + largest);
+    System.out.println("smallest of N number is : " + smallest);
+  }
+
+}
+
+
+

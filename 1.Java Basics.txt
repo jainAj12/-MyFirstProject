@@ -1,0 +1,77 @@
+1.
+import java.util.Scanner;  
+public class EvenOdd  
+{  
+public static void main (String args[])  
+{  
+//creating Scanner class object     
+Scanner scan=new Scanner(System.in);  
+System.out.print("Enter the number: ");  
+//reading value from user  
+int num=scan.nextInt();  
+//method calling  
+findEvenOdd(num);  
+}  
+//user defined method  
+public static void findEvenOdd(int num)  
+{  
+//method body  
+if(num%2==0)   
+System.out.println(num+" is even");   
+else   
+System.out.println(num+" is odd");  
+}  
+}  
+
+2.
+public class Exercise {
+ 
+ public static void main(String[] args) {
+  System.out.println("Ansh Jain");
+ }
+}
+
+3.
+public class CommentExample {  
+public static void main(String[] args) {  
+    int i=10;//single line comment  
+    System.out.println(i);  
+}  
+}  
+
+public class CommentExample2 {  
+public static void main(String[] args) {  
+/* Multi-Line 
+ Comment */  
+    int i=10;  
+    System.out.println(i);  
+}  
+}  
+
+/** Documentation Comment*/  
+public class Calculator {  
+/** Documentation Comment*/  
+public static int add(int a, int b){return a+b;}  
+/** Documentation Comment*/  
+public static int sub(int a, int b){return a-b;}  
+}  
+
+4.
+public class abc{
+    public int a; //global and accessible by every class outside this class too 
+    private int b; //global and accessible only within this class
+    private void m(){
+        int x; //local and accessible only within this method 
+    }
+}
+
+5.
+public class Main {
+  static void myMethod() {
+    System.out.println("Ansh Jain");
+  }
+
+  public static void main(String[] args) {
+    myMethod();
+  }
+}
