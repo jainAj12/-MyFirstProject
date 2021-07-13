@@ -1,0 +1,48 @@
+1.
+// Change heading:
+document.getElementById("myH").innerHTML = "My First Page";
+
+// Change paragraph:
+document.getElementById("myP").innerHTML = "My first paragraph.";
+
+/*
+The code below will change
+the heading with id = "myH"
+and the paragraph with id = "myP"
+in my web page:
+*/
+document.getElementById("myH").innerHTML = "My First Page";
+document.getElementById("myP").innerHTML = "My first paragraph.";
+
+2.
+var fruits = ["Banana", "Orange", "Apple", "Papaya", "Mango"];
+var sorted = fruits.sort();
+
+3.
+for (var counter = 1; counter < 5; counter++) {
+    console.log('Inside the loop:' + counter);
+}
+console.log('Outside the loop:' + counter);
+
+4.
+let person = {firstName:"John", lastName:"Doe"};
+console.log(person);
+
+5.
+/ Declare
+var strNumber; 
+// Initialize
+strNumber = '16';
+// Use
+parseInt(strNumber); // => 16
+
+6.
+function strict() {
+     // Function-level strict mode syntax
+     'use strict';
+     function nested() { return 'And so am I!'; }
+     return "Hi!  I'm a strict mode function!  " + nested();
+ }
+ function notStrict() { return "I'm not strict."; }
+
+ console.log(strict(), notStrict());

@@ -1,0 +1,38 @@
+1.
+document.getElementById("myBtn").addEventListener("click", function() {
+  document.getElementById("demo").innerHTML = "Hello World";
+});
+
+2.
+// If the length of the element's string is 0 then display helper message 
+   function required(inputtx) 
+   {
+     if (inputtx.value.length == 0)
+      { 
+         alert("message");  	
+         return false; 
+      }  	
+      return true; 
+    } 
+
+3.
+log() allows you to output variables in your javascript debugger of choice instead of flashing an alert() every time you want to inspect something... additionally, for more complex objects it will give you a tree view to inspect the object further instead of having to convert elements to strings like an alert() .
+
+4.
+function setCookie(name, value, daysToLive) {
+    // Encode value in order to escape semicolons, commas, and whitespace
+    var cookie = name + "=" + encodeURIComponent(value);
+    
+    if(typeof daysToLive === "number") {
+        /* Sets the max-age attribute so that the cookie expires
+        after the specified number of days */
+        cookie += "; max-age=" + (daysToLive*24*60*60);
+        
+        document.cookie = cookie;
+    }
+}
+
+5.
+const myJSON = '{"name":"John", "age":30, "car":null}';
+const myObj = JSON.parse(myJSON);
+x = myObj.name;

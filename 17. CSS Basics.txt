@@ -1,0 +1,61 @@
+1.
+/* This is a single-line comment */
+p {
+  color: red;
+}
+
+p {
+  color: red;  /* Set text color to red */
+}
+
+/* This is
+a multi-line
+comment */
+
+p {
+  color: red;
+}
+
+2.
+body {
+  background-image: url("img_tree.gif");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+3.
+/* Four values */
+p {
+  border-style: dotted solid double dashed;
+}
+
+/* Three values */
+p {
+  border-style: dotted solid double;
+}
+
+/* Two values */
+p {
+  border-style: dotted solid;
+}
+
+/* One value */
+p {
+  border-style: dotted;
+}
+
+4.
+div {
+  height: 200px;
+  width: 50%;
+  background-color: powderblue;
+}
+
+5.
+<HEAD>
+ <TITLE>How to Carve Wood</TITLE>
+ <STYLE type="text/css">
+  P.mypar {text-align: right}
+ </STYLE>
+<BODY>
+ <P class="mypar">...Lots of paragraph text...

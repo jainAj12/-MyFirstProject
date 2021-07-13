@@ -1,0 +1,46 @@
+1.
+.imagedropshadow {
+    padding: 5px;
+    border: solid 1px #EFEFEF;
+}
+a:hover img.imagedropshadow {
+    border: solid 1px #CCC;
+    -moz-box-shadow: 1px 1px 5px #999;
+    -webkit-box-shadow: 1px 1px 5px #999;
+        box-shadow: 1px 1px 5px #999;
+}
+
+2.
+/* @keyframes duration | easing-function | delay |
+iteration-count | direction | fill-mode | play-state | name */
+animation: 3s ease-in 1s 2 reverse both paused slidein;
+
+/* @keyframes name | duration | easing-function | delay */
+animation: slidein 3s linear 1s;
+
+/* @keyframes name | duration */
+animation: slidein 3s;
+
+3.
+position: static;
+position: relative;
+position: absolute;
+position: fixed;
+position: sticky;
+
+/* Global values */
+position: inherit;
+position: initial;
+position: revert;
+position: unset;
+
+4.
+div {
+  overflow-x: hidden; /* Hide horizontal scrollbar */
+  overflow-y: scroll; /* Add vertical scrollbar */
+}
+
+5.
+img {
+  opacity: 0.5;
+}

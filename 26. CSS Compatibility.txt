@@ -1,0 +1,85 @@
+1.
+table {
+  table-layout: fixed;
+  width: 120px;
+  border: 1px solid red;
+}
+
+td {
+  border: 1px solid blue;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+2.
+/* Partial list of types */
+list-style-type: disc;
+list-style-type: circle;
+list-style-type: square;
+list-style-type: decimal;
+list-style-type: georgian;
+list-style-type: trad-chinese-informal;
+list-style-type: kannada;
+
+/* <string> value */
+list-style-type: '-';
+
+/* Identifier matching an @counter-style rule */
+list-style-type: custom-counter-style;
+
+/* Keyword value */
+list-style-type: none;
+
+/* Global values */
+list-style-type: inherit;
+list-style-type: initial;
+list-style-type: revert;
+list-style-type: unset;
+
+3.
+<div class="wrapper">
+  <div>One</div>
+  <div>Two</div>
+  <div>Three</div>
+  <div>Four</div>
+  <div>Five</div>
+</div>
+
+.wrapper {
+  display: grid;
+}
+
+4.
+<div class="hero-image">
+  <div class="hero-text">
+    <h1>I am John Doe</h1>
+    <p>And I'm a Photographer</p>
+    <button>Hire me</button>
+  </div>
+</div>
+
+5.
+/* The navbar container */
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+/* Navbar links */
+.topnav a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* On screens that are 600px wide or less, make the menu links stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .topnav a {
+    float: none;
+    width: 100%;
+  }
+}

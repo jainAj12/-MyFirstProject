@@ -1,0 +1,101 @@
+1.
+<form>
+    <label>Username: <input type="text"></label>
+    <label>Password: <input type="password"></label>
+    <input type="submit" value="Submit">
+</form>
+<form>
+    <input type="radio" name="gender" id="male">
+    <label for="male">Male</label>
+    <input type="radio" name="gender" id="female">
+    <label for="female">Female</label>
+</form>
+<form>
+    <input type="checkbox" name="sports" id="soccer">
+    <label for="soccer">Soccer</label>
+    <input type="checkbox" name="sports" id="cricket">
+    <label for="cricket">Cricket</label>
+    <input type="checkbox" name="sports" id="baseball">
+    <label for="baseball">Baseball</label>
+</form>
+<form>
+    <label for="address">Address:</label>
+    <textarea rows="3" cols="30" name="address" id="address"></textarea>
+</form>
+<form>
+    <label for="city">City:</label>
+    <select name="city" id="city">
+        <option value="sydney">Sydney</option>
+        <option value="melbourne">Melbourne</option>
+        <option value="cromwell">Cromwell</option>
+    </select>
+</form>
+
+2.
+<form>
+    <label>Username: <input type="text"></label>
+    <label>Password: <input type="password"></label>
+    <input type="submit" value="Submit">
+</form>
+<form>
+    <input type="radio" name="gender" id="male">
+    <label for="male">Male</label>
+    <input type="radio" name="gender" id="female">
+    <label for="female">Female</label>
+</form>
+<form>
+    <input type="checkbox" name="sports" id="soccer">
+    <label for="soccer">Soccer</label>
+    <input type="checkbox" name="sports" id="cricket">
+    <label for="cricket">Cricket</label>
+    <input type="checkbox" name="sports" id="baseball">
+    <label for="baseball">Baseball</label>
+</form>
+<form>
+    <label for="address">Address:</label>
+    <textarea rows="3" cols="30" name="address" id="address"></textarea>
+</form>
+<form>
+    <label for="city">City:</label>
+    <select name="city" id="city">
+        <option value="sydney">Sydney</option>
+        <option value="melbourne">Melbourne</option>
+        <option value="cromwell">Cromwell</option>
+    </select>
+</form>
+
+3.
+label for="name">Name (4 to 8 characters):</label>
+
+<input type="text" id="name" name="name" required
+       minlength="4" maxlength="8" size="10">
+
+4.
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>
+		HTML target Attribute
+	</title>
+</head>
+
+<body>
+	<center>
+		<h1>Geeks</h1>
+
+		<h2>HTML Target Attribute</h2>
+
+		<p>Welcome to
+			<a href="https://ide.geeks.org/"
+					id="GFG" target="_self">
+				Geeks
+			</a>
+		</p>
+	</center>
+</body>
+
+</html>
+
+5.
+<iframe src="https://www.w3schools.com" title="W3Schools Free Online Web Tutorials"></iframe>

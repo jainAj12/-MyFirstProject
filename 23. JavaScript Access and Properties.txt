@@ -1,0 +1,168 @@
+1.
+function closeMe(){
+
+   		x=document.getElementById("demo");
+
+   		x.style.display="none";
+
+	}
+
+function openMe(){
+
+   		x=document.getElementById("demo");
+
+   		 x.style.display="block";
+
+	}
+	<h1>Changing the Style</h1>
+	<p>JavaScript can change the style of an HTML element.</p>
+
+	<button type="button" onclick="openMe()">Open!</button>
+	<button type="button" onclick="closeMe()">Close!</button>
+
+	<p id="demo">Extra details...You can open and close this paragraph using  above.</p>
+
+2.
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>call() method</title>
+	</head>
+	
+	<body style = "text-align:center;">
+		<h1 style = "color:green;" >
+			GeeksForGeeks
+		</h1>
+
+		<button onClick="fun()">
+			click
+		</button>
+		
+		<p id="GFG"></p>
+		
+		<!-- Script to use call() method to call
+			function -->
+		<script>
+			function fun() {
+			let p = {
+				fullName: function(addr1, addr2) {
+				return this.fName + " " + this.lName
+						+ ", " + addr1 + ", " + addr2;
+				}
+			}
+				
+			let p1 = {
+				fName:"GFGfName",
+				lName: "GFGlName",
+			}
+				
+			let x = p.fullName.call(p1, "India", "USA");
+			document.getElementById("GFG").innerHTML = x;
+			}
+		</script>
+	</body>
+</html>
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>JavaScript apply() method</title>
+	</head>
+		
+	<body style = "text-align:center;">
+	
+		<h1 style = "color:green;" >
+			GeeksForGeeks
+		</h1>
+
+		<button onClick="fun()">
+			click
+		</button>
+		
+		<p id="GFG"></p>
+		
+		<script>
+			function fun() {
+				let p = {
+				fullName: function(addr1, addr2) {
+					return this.fName + " " + this.lName
+							+ ", " + addr1 + ", " + addr2;
+				}
+			}
+			let p1 = {
+				fName:"GFGfName",
+				lName: "GFGlName",
+			}
+				let x = p.fullName.apply(p1, ["India", "USA"]);
+				document.getElementById("GFG").innerHTML = x;
+			}
+		</script>
+	</body>
+</html>
+
+3.
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Increment count when button is clicked</title>
+</head>
+
+<body style="text-align: center;">
+	<h1 style="color: green;">
+		GeeksforGeeks
+	</h1>
+
+	<h4>
+		How to count the number of
+		times a button is clicked?
+	</h4>
+
+	<button id="btn">Click Here!</button>
+
+	<p>
+		Button Clicked <span
+		id="display">0</span> Times
+	</p>
+
+	<script type="text/javascript">
+		var count = 0;
+		var btn = document.getElementById("btn");
+		var disp = document.getElementById("display");
+
+		btn.onclick = function () {
+			count++;
+			disp.innerHTML = count;
+		}
+	</script>
+</body>
+
+</html>
+
+4.
+// Create an object:
+const person = {
+  firstName: "John",
+  lastName: "Doe",
+  language: "en",
+  get lang() {
+    return this.language;
+  }
+};
+
+// Display data from the object using a getter:
+document.getElementById("demo").innerHTML = person.lang;
+
+5.
+function Person(first, last, age, gender, interests) {
+
+  // property and method definitions
+  this.name = {
+    'first': first,
+    'last' : last
+  };
+  this.age = age;
+  this.gender = gender;
+  //...see link in summary above for full definition
+}
+
